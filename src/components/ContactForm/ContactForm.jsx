@@ -39,8 +39,6 @@ const schema = yup.object().shape({
 
 export const ContactForm = ({ handleAddContact }) => {
   const handleSubmit = (values, { resetForm }) => {
-    console.log(values);
-
     handleAddContact({ id: nanoid(), ...values });
 
     resetForm();
