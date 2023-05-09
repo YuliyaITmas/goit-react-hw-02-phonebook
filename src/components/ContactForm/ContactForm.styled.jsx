@@ -59,6 +59,11 @@ export const Button = styled.button`
     background-color: #333;
     transform: scale(1.05);
   }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
 `;
 
 export const Error = styled(ErrorMessage)`
@@ -67,3 +72,4 @@ export const Error = styled(ErrorMessage)`
   margin-top: 5px;
   max-width: 200px;
 `;
+

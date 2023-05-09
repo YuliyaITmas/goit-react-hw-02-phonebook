@@ -49,7 +49,7 @@ export const ContactForm = ({ handleAddContact }) => {
       onSubmit={handleSubmit}
       validationSchema={schema}
     >
-      {({ errors, touched }) => (
+      {({ errors, touched, isValid, dirty }) => (
         <Forma>
           <Label>
             Name
@@ -76,7 +76,7 @@ export const ContactForm = ({ handleAddContact }) => {
             <Error name="number" component="div" />
           </Label>
 
-          <Button type="submit">Add contact</Button>
+          <Button type="submit"  disabled={!dirty || !isValid} >Add contact</Button>
         </Forma>
       )}
     </Formik>
